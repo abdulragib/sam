@@ -38,8 +38,7 @@ class _DashboardState extends State<Dashboard> {
                     child: Expanded(
                         child: Column(children: <Widget>[
                           Text("Piyush"),
-                          SizedBox(height: 5),
-                          Text("STD - 12(B)"),
+
                         ])),
                   ),
                 ),
