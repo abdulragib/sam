@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:sam/pages/camera_page.dart';
+import 'package:sam/pages/history.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -37,8 +38,7 @@ class _DashboardState extends State<Dashboard> {
                         top: 58.0, left: 88.0, right: 88.0, bottom: 48.0),
                     child: Expanded(
                         child: Column(children: <Widget>[
-                          Text("Piyush"),
-
+                          Text("Piyush",style:TextStyle(fontSize:25)),
                         ])),
                   ),
                 ),
@@ -64,7 +64,7 @@ class _DashboardState extends State<Dashboard> {
                         },
                         child: Expanded(child: Text("Punch Attendance"),),),
                     ),),
-                  SizedBox(width: 20.0),
+                  SizedBox(width: 10.0),
                   Card(
                     child: Padding(
                       padding: EdgeInsets.only(
@@ -92,19 +92,15 @@ class _DashboardState extends State<Dashboard> {
                     child: Padding(
                       padding: EdgeInsets.only(
                           top: 38.0, left: 60.0, right: 60.0, bottom: 38),
-                      child: Expanded(child: Text("History")),
+                      child: FlatButton(
+                          onPressed: () {
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => history()),
+                          ); },
+                          child: Expanded(child: Text("History"))),
                     ),),
-                  SizedBox(width: 20.0),
-                  Card(
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                          top: 38.0, left: 55.0, right: 55.0, bottom: 38.0),
-                      child: Expanded(
-                        child:
-                        Text("Result"),
-                      ),
-                    ),
-                  ),
+
 
                 ],)
             ],
